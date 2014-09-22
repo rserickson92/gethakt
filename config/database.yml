@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: gethakt_dev
+  pool: 5
+  host: localhost
+  username: gethakt
+  password: mbbt173421122305!^R
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: gethakt_test
+  pool: 5
+  host: localhost
+  username: gethakt
+  password: mbbt173421122305!^R
