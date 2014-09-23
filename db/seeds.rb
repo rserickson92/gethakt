@@ -6,6 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-u = User.create(name: "rerickson", password: "password")
-Post.create(text: "Welcome to Get Hakt!", user_id: u.id)
-Post.create(text: "You are not safe here...", user_id: u.id)
+unless User.find_by(name: "rerickson")
+  u = User.create(name: "rerickson", password: "password")
+  Post.create(text: "Welcome to Get Hakt!", user_id: u.id)
+  Post.create(text: "You are not safe here...", user_id: u.id)
+end

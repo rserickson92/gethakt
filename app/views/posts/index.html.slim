@@ -1,2 +1,4 @@
 - @posts.each do |post|
-  p = post.text
+  .post
+    p.owner = post[:owner]
+    p.text = post[:text]
