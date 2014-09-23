@@ -1,5 +1,10 @@
-- @posts.each do |post|
-  .post
-    p.owner = post[:owner]
-    p.text = post[:text]
-= link_to "Log Out", logout_path, method: :delete
+.row
+  .small-2.medium-2.large-2.columns.sidebar
+  #post-area.small-8.medium-8.large-8.columns
+    #new-post.post
+      = simple_form_for @post do |f|
+      	= f.input :text, label: false, as: :text
+      	= f.button :submit, "Create Post", class: "small"
+    = render "posts"
+    = link_to "Log Out", logout_path, method: :delete
+  .small-2.medium-2.large-2.columns.sidebar

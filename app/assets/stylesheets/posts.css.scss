@@ -1,3 +1,33 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+	background-color: #526A7F;
+}
+
+.post {
+	border: 2px groove #94BFE5;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 5px 0;
+  background-color: white;
+  min-height: 70px;
+  .owner {
+  	display: inline;
+  }
+  .body {
+  	border-top: 1px solid #7C9FBF;
+  }
+}
+
+#post-area {
+	background-color: #A5D4FF;
+	min-height: 1500px;
+}
+
+.sidebar {
+	background-color: #94BFE5;
+  min-height: 1500px;
+  border: 1px solid #7C9FBF;
+}

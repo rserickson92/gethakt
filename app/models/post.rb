@@ -1,9 +1,10 @@
 class Post < ActiveRecord::Base
   has_many :comments
+  validates :text, presence: true, length: { minimum: 1, maximum: 500 }
 
   def self.load_all
   	post_data = []
-  	posts = Post.all
+  	posts = Post.all.order("created_at DESC")
   	unless posts.nil?
   	  posts.each do |post|
   		  owner = User.find(post.user_id)

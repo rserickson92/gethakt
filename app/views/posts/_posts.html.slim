@@ -1,0 +1,8 @@
+- @posts.each do |post|
+  .post
+    .header
+      = image_tag "blank.jpg"
+      p.owner = post[:owner]
+    .body
+      p.text = post[:text]
+    .footer
