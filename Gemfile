@@ -26,7 +26,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
-gem 'foundation-rails'
+gem 'foundation-rails', '5.4.3.1'
 gem 'slim', '~> 2.0.3'
 gem 'pg', '~> 0.17.1'
 gem 'simple_form', '~> 3.0.2'
