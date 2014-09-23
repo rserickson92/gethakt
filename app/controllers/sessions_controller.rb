@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  before_action :check_if_already_logged_in, except: [:destroy]
   def new
   	@user = User.new
   end
@@ -23,5 +24,9 @@ class SessionsController < ApplicationController
 
   def session_params
   	params.require(:user).permit(:name, :password)
+  end
+
+  def check_if_already_logged_in
+    redirect_to posts_path if current_user
   end
 end
