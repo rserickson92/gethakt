@@ -1,0 +1,9 @@
+= render "layouts/site_title"
+.row
+  .small-4.medium-4.large-4.small-centered.columns
+    = simple_form_for @user do |f|
+      = f.input :name, label: "Username:"
+      = f.input :password, label: "Password:"
+      = f.label :repeat_password, "Repeat Password:"
+      = f.input_field :repeat_password, required: true
+      = f.button :submit, "Create Account"
