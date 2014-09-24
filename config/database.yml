@@ -15,3 +15,8 @@ test:
   host: localhost
   username: gethakt
   password: mbbt173421122305!^R
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
