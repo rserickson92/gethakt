@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-	before_action :check_if_logged_in
+	before_action :check_if_login_required
   def index
   	@posts = Post.load_all
   	@post = Post.new

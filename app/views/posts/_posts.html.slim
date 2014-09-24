@@ -4,5 +4,5 @@
       = image_tag "blank.jpg"
       p.owner = post[:owner]
     .body
-      p.text = post[:text]
+      p.text = post[:text].html_safe
     .footer

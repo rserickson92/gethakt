@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-  	session[:user_id] = nil
+  	end_session
   	redirect_to root_path
   end
 
@@ -25,8 +25,5 @@ class SessionsController < ApplicationController
   def session_params
   	params.require(:user).permit(:name, :password)
   end
-
-  def check_if_already_logged_in
-    redirect_to posts_path if current_user
-  end
+  
 end

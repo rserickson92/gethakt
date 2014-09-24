@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :check_if_logged_in
+  before_action :check_if_already_logged_in
   def new
   	@user = User.new
   end
