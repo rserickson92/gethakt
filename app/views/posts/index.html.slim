@@ -1,3 +1,7 @@
+= content_for :nav_content do
+	ul.right
+	  li.name = link_to @current_user.name, "#"
+	  li.name = link_to "Log Out", logout_path, method: :delete
 .row
   .small-2.medium-2.large-2.columns.sidebar
   #post-area.small-8.medium-8.large-8.columns
@@ -6,5 +10,4 @@
       	= f.input :text, label: false, as: :text
       	= f.button :submit, "Create Post", class: "small"
     = render "posts"
-    = link_to "Log Out", logout_path, method: :delete
   .small-2.medium-2.large-2.columns.sidebar
